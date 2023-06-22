@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>أداة الاختراق الفعالة 9000</title>
+  <style>
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      direction: rtl;
+    }
+
+    h1 {
+      text-align: center;
+      margin-top: 50px;
+      font-size: 40px;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 100px;
+    }
+
+    .form {
+      display: flex;
+      align-items: center;
+    }
+
+    input[type="text"] {
+      width: 300px;
+      padding: 10px;
+      font-size: 18px;
+    }
+
+    input[type="submit"] {
+      background-color: #0f0;
+      border: none;
+      padding: 10px 20px;
+      margin-left: 10px;
+      color: #000;
+      font-size: 18px;
+      cursor: pointer;
+    }
+
+    .screen {
+      display: none;
+      margin-top: 50px;
+      width: 600px;
+      height: 400px;
+      background-color: #000;
+      border: 2px solid #0f0;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .screen:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #000;
+      opacity: 0.8;
+      z-index: 1;
+    }
+
+    .screen-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #0f0;
+      font-size: 24px;
+      text-align: center;
+      z-index: 2;
+    }
+  </style>
+</head>
+<body>
+  <h1>أداة الاختراق الفعالة 9000</h1>
+  <div class="container">
+    <form class="form">
+      <input type="text" id="device-id" placeholder="أدخل اسم المؤسسة التي تود اختراقها">
+      <input type="submit" value="دخول">
+    </form>
+    <div class="screen">
+      <div class="screen-text">يجري اختراق أجهزة المعهد...</div>
+    </div>
+  </div>
+
+  <script>
+    const form = document.querySelector('.form');
+    const screen = document.querySelector('.screen');
+
+    form.addEventListener('submit', function(event) {
+      event.preventDefault();
+      screen.style.display = 'block';
+      setTimeout(function() {
+        screen.innerHTML = '<div class="screen-text">تم الاختراق , يمكنك الوصول للملفات و التعديل عليها!</div>';
+      }, 3000);
+    });
+  </script>
+  
+  <audio src="./video_to_audio_h.mp3" autoplay loop></audio>
+</body>
+</html>
